@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
 RUN locale-gen zh_TW.UTF-8
 ENV LANG zh_TW.UTF-8
 
+COPY website /var/www/html/
 COPY xinetd.conf /etc/
 COPY inetd.conf /etc/
 COPY vsftpd.conf /etc/
@@ -24,7 +25,6 @@ RUN chmod +x /start.sh
 
 VOLUME /config/
 VOLUME /home/
-VOLUME /var/www/html/
 
 EXPOSE 20 21 23 80
 

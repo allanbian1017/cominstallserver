@@ -19,7 +19,7 @@ docker pull allanbian/cominstallserver
 Exposed ports and volumes
 ----
 
-The image exposes ports `20`, `21`, `23` and `80`. Also, exports three volumes: `/home/`, which contains users home directories, `/config/`, used to store user list, and `/var/www/html/`, which contains website.
+The image exposes ports `20`, `21`, `23` and `80`. Also, exports two volumes: `/home/`, which contains users home directories, and `/config/`, used to store user list.
 
 Use cases
 ----
@@ -38,7 +38,6 @@ username:password
   docker run --rm -it \
 	-p 21100-21110:21100-21110 \
 	-p 80:80 -p 21:21 -p 20:20 -p 23:23 \
-	-v $PWD/website/:/var/www/html/ \
 	-v $PWD/config/:/config/ \
 	-v $PWD/home/:/home/ \
 	allanbian/cominstallserver
@@ -50,7 +49,6 @@ username:password
 docker run -d \
 	-p 21100-21110:21100-21110 \
 	-p 80:80 -p 21:21 -p 20:20 -p 23:23 \
-	-v $PWD/website/:/var/www/html/ \
 	-v $PWD/config/:/config/ \
 	-v $PWD/home/:/home/ \
     --name cominstallserver \
