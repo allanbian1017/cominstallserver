@@ -1,8 +1,6 @@
 # 電腦硬體裝修丙級伺服器
 
-![docker_logo](https://raw.githubusercontent.com/fauria/docker-vsftpd/master/docker_139x115.png)
-
-This Docker container implements a vsftpd server, with the following features:
+This Docker container implements a telnet/http/ftp server, with the following features:
 
  * Ubuntu 16.04 base image.
 
