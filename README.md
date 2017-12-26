@@ -1,4 +1,4 @@
-# 電腦硬體丙級裝修伺服器
+# 電腦硬體裝修丙級伺服器
 
 ![docker_logo](https://raw.githubusercontent.com/fauria/docker-vsftpd/master/docker_139x115.png)
 
