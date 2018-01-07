@@ -8,4 +8,7 @@ do
   PASS=${row#*:}
 
   useradd -p `mkpasswd "$PASS"` -m -s /bin/bash "$USER"
+  mkdir -p /home/$USER/web
+  chown $USER:$USER /home/$USER/web
+  ln -s /home/$USER/web /var/www/html/$USER
 done
