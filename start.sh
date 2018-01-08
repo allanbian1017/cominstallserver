@@ -19,6 +19,8 @@ fi
 # Start httpd service
 echo "ServerName ${HOST_IP}" >> /etc/apache2/apache2.conf
 echo "AddDefaultCharset utf-8" >> /etc/apache2/apache2.conf
+echo "application/x-font-ttf                          ttc" >> /etc/mime.types
+
 service apache2 restart
 
 # Start ftp service
