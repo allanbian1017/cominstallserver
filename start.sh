@@ -34,4 +34,7 @@ service vsftpd restart
 # Start telnet service
 service xinetd restart
 
+# Start dhcp service
+service isc-dhcp-server restart
+
 bash

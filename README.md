@@ -58,6 +58,7 @@ username:password
 
 ```bash
   docker run --rm -it \
+	--net host \
 	-p 21100-21110:21100-21110 \
 	-p 80:80 -p 21:21 -p 20:20 -p 23:23 \
 	-v $PWD/config/:/config/ \
@@ -69,6 +70,7 @@ username:password
 
 ```bash
 docker run -d \
+	--net host \
 	-p 21100-21110:21100-21110 \
 	-p 80:80 -p 21:21 -p 20:20 -p 23:23 \
 	-v $PWD/config/:/config/ \
